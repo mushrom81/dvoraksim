@@ -91,7 +91,6 @@ function loop() {
         typingBox.value = ""
         outputBox.style.display = "none";
     }
-    if (typingBox.value.length > 23) typingBox.value = typingBox.value.substr(typingBox.value.length - 23);
-    outputBox.value = translate(typingBox.value) + "█";
+    outputBox.value = "█" + translate(typingBox.value);
 }
 loop();
