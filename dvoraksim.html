@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <meta charset="UTF-8">
+        <title>QWERTY to DVORAK live converter</title>
+        <style>
+
+            #outputBox {
+                white-space: nowrap;
+                overflow: hidden;
+                resize: none;
+                font-size: 4em;
+                text-align: right;
+                white-space: pre;
+                border: white;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div>
+            <textarea id="outputBox" cols="24" rows="1" style=""></textarea> <div></div>
+            <input id="typingBox"></input>
+        </div>
+        <image src="dvorak.gif"></image>
+        <script src="dvoraksim.js"></script>
+    </body>
+</html>
