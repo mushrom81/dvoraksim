@@ -71,11 +71,16 @@ var translateHash = {
 }
 
 function translate(typedChars) {
-    charArray = typedChars.split("");
+    var charArray = typedChars.split("");
     for (var i = 0; i < charArray.length; i++) {
         if (charArray[i] in translateHash) charArray[i] = translateHash[charArray[i]];
     }
     return charArray.join("");
+}
+
+function truncate(string) {
+    return string.split("").reverse().slice(0, 23).reverse().join("");
+
 }
 
 function loop() {
@@ -91,6 +96,6 @@ function loop() {
         typingBox.value = ""
         outputBox.style.display = "none";
     }
-    outputBox.value = "█" + translate(typingBox.value);
+    outputBox.value = truncate(translate(typingBox.value)) + "█";
 }
 loop();
